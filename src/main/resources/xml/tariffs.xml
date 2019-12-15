@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="tariffs.xsl"?>
+
+<tariffs xmlns="tariffs"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="tariffs.xsd">
+    <tariff tariffNo="1">
+        <name>qwe</name>
+        <operator_name>bbb</operator_name>
+        <payroll>10000</payroll>
+        <call_prices>
+            <inside>0</inside>
+            <outside>23</outside>
+            <landline_phone>80</landline_phone>
+        </call_prices>
+        <sms_price>100</sms_price>
+        <parameters>
+            <favorite_numbers>1</favorite_numbers>
+            <tariffing>per_1_minute</tariffing>
+            <connection_payment>0.23</connection_payment>
+        </parameters>
+    </tariff>
+</tariffs>
