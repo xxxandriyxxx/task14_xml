@@ -1,6 +1,8 @@
 package com.epam;
 
+import com.epam.parser.XmlToHtmlTransformer;
 import com.epam.parser.dom.DOMReader;
+import com.epam.parser.dom.DOMValidator;
 import com.epam.parser.sax.SAXHandler;
 import com.epam.parser.sax.SAXValidator;
 import com.epam.parser.stax.StAXReader;
@@ -34,9 +36,10 @@ public class Application {
 //        ----------------------------
         String schemaPath = "src/main/resources/xml/tariffs.xsd";
         String xmlPath = "src/main/resources/xml/tariffs.xml";
-
+        String xslPath = "src/main/resources/xml/tariffs.xsl";
         SAXValidator.validate(schemaPath, xmlPath);
-
         StAXValidator.validate(schemaPath, xmlPath);
+//        DOMValidator.validate(schemaPath, xmlPath);
+        XmlToHtmlTransformer.transform(xslPath, xmlPath);
     }
 }
