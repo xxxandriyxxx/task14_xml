@@ -36,12 +36,12 @@ public class SAXValidator {
         }
     }
 
-    private static Schema loadSchema(String name) {
+    private static Schema loadSchema(String schemaFilePath) {
         Schema schema = null;
         try {
             String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
             SchemaFactory factory = SchemaFactory.newInstance(language);
-            schema = factory.newSchema(new File(name));
+            schema = factory.newSchema(new File(schemaFilePath));
         } catch (Exception e) {
             e.printStackTrace();
         }
