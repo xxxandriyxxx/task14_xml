@@ -4,20 +4,84 @@
 <tariffs xmlns="tariffs"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="tariffs.xsd">
-    <tariff tariffNo="1">
-        <name>qwe</name>
-        <operator_name>bbb</operator_name>
-        <payroll>10000</payroll>
+    <tariff tariffNo="0">
+        <name>Super Unlim</name>
+        <operator_name>Kyivstar</operator_name>
+        <payroll>250</payroll>
         <call_prices>
             <inside>0</inside>
-            <outside>23</outside>
-            <landline_phone>80</landline_phone>
+            <outside>10</outside>
+            <landline_phone>20</landline_phone>
         </call_prices>
-        <sms_price>100</sms_price>
+        <sms_price>15</sms_price>
+        <parameters>
+            <favorite_numbers>5</favorite_numbers>
+            <tariffing>per_1_minute</tariffing>
+            <connection_payment>25.50</connection_payment>
+        </parameters>
+    </tariff>
+    <tariff tariffNo="1">
+        <name>Super Net</name>
+        <operator_name>Kyivstar</operator_name>
+        <payroll>300</payroll>
+        <call_prices>
+            <inside>0</inside>
+            <outside>35</outside>
+            <landline_phone>45</landline_phone>
+        </call_prices>
+        <sms_price>20</sms_price>
+        <parameters>
+            <favorite_numbers>2</favorite_numbers>
+            <tariffing>per_15_seconds</tariffing>
+            <connection_payment>14.99</connection_payment>
+        </parameters>
+    </tariff>
+    <tariff tariffNo="2">
+        <name>4G Smart</name>
+        <operator_name>Vodafone</operator_name>
+        <payroll>150</payroll>
+        <call_prices>
+            <inside>10</inside>
+            <outside>80</outside>
+            <landline_phone>99</landline_phone>
+        </call_prices>
+        <sms_price>50</sms_price>
         <parameters>
             <favorite_numbers>1</favorite_numbers>
             <tariffing>per_1_minute</tariffing>
-            <connection_payment>0.23</connection_payment>
+            <connection_payment>5.50</connection_payment>
+        </parameters>
+    </tariff>
+    <tariff tariffNo="3">
+        <name>Bomba</name>
+        <operator_name>Lifecell</operator_name>
+        <payroll>100</payroll>
+        <call_prices>
+            <inside>0</inside>
+            <outside>50</outside>
+            <landline_phone>50</landline_phone>
+        </call_prices>
+        <sms_price>49</sms_price>
+        <parameters>
+            <favorite_numbers>4</favorite_numbers>
+            <tariffing>per_15_seconds</tariffing>
+            <connection_payment>0</connection_payment>
+        </parameters>
+    </tariff>
+    <tariff tariffNo="4">
+        <name>Business</name>
+        <operator_name>Lifecell</operator_name>
+        <payroll>350</payroll>
+        <call_prices>
+            <inside>0</inside>
+            <outside>10</outside>
+            <landline_phone>10</landline_phone>
+        </call_prices>
+        <sms_price>25</sms_price>
+        <parameters>
+            <favorite_numbers>10</favorite_numbers>
+            <tariffing>per_1_minute</tariffing>
+            <connection_payment>10</connection_payment>
         </parameters>
     </tariff>
 </tariffs>
