@@ -1,4 +1,4 @@
-package com.epam.parser;
+package com.epam.model.parser;
 
 import java.io.FileOutputStream;
 import java.io.OutputStream;

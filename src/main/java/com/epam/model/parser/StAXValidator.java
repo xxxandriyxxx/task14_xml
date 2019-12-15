@@ -1,4 +1,4 @@
-package com.epam.parser.stax;
+package com.epam.model.parser;
 
 import javax.xml.validation.*;
 import javax.xml.transform.stax.*;

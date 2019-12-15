@@ -1,4 +1,4 @@
-package com.epam.parser.dom;
+package com.epam.model.parser;
 
 import java.io.File;
 

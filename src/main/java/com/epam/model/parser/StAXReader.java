@@ -1,4 +1,4 @@
-package com.epam.parser.stax;
+package com.epam.model.parser;
 
 import com.epam.model.CallPrices;
 import com.epam.model.Parameters;

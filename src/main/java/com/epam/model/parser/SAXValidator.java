@@ -1,4 +1,4 @@
-package com.epam.parser.sax;
+package com.epam.model.parser;
 
 import java.io.File;
 
