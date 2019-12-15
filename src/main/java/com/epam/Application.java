@@ -37,9 +37,13 @@ public class Application {
         String schemaPath = "src/main/resources/xml/tariffs.xsd";
         String xmlPath = "src/main/resources/xml/tariffs.xml";
         String xslPath = "src/main/resources/xml/tariffs.xsl";
+        String xslPathSort = "src/main/resources/xml/tariffsSort.xsl";
+
         SAXValidator.validate(schemaPath, xmlPath);
         StAXValidator.validate(schemaPath, xmlPath);
-//        DOMValidator.validate(schemaPath, xmlPath);
+        DOMValidator.validate(schemaPath, xmlPath);
+        
         XmlToHtmlTransformer.transform(xslPath, xmlPath);
+        XmlToHtmlTransformer.transform(xslPathSort, xmlPath);
     }
 }
