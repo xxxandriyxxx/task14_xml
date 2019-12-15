@@ -6,9 +6,9 @@ public class Tariff {
     private String name;
     private String operatorName;
     private double payroll;
-    private CallPrice callPrices;
+    private CallPrices callPrices;
     private int smsPrice;
-    private Parameter parameters;
+    private Parameters parameters;
 
     public Tariff() {
     }
@@ -45,11 +45,11 @@ public class Tariff {
         this.payroll = payroll;
     }
 
-    public CallPrice getCallPrices() {
+    public CallPrices getCallPrices() {
         return callPrices;
     }
 
-    public void setCallPrices(CallPrice callPrices) {
+    public void setCallPrices(CallPrices callPrices) {
         this.callPrices = callPrices;
     }
 
@@ -61,11 +61,11 @@ public class Tariff {
         this.smsPrice = smsPrice;
     }
 
-    public Parameter getParameters() {
+    public Parameters getParameters() {
         return parameters;
     }
 
-    public void setParameters(Parameter parameters) {
+    public void setParameters(Parameters parameters) {
         this.parameters = parameters;
     }
 

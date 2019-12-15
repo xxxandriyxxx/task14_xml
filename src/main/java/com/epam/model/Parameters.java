@@ -1,26 +1,26 @@
 package com.epam.model;
 
-public class Parameter {
+public class Parameters {
 
-    private int fvoriteNumbers;
+    private int favoriteNumbers;
     private Tariffing tariffing;
     private double connectionPayment;
 
-    public Parameter() {
+    public Parameters() {
     }
 
-    public Parameter(int fvoriteNumbers, Tariffing tariffing, double connectionPayment) {
-        this.fvoriteNumbers = fvoriteNumbers;
+    public Parameters(int fvoriteNumbers, Tariffing tariffing, double connectionPayment) {
+        this.favoriteNumbers = fvoriteNumbers;
         this.tariffing = tariffing;
         this.connectionPayment = connectionPayment;
     }
 
-    public int getFvoriteNumbers() {
-        return fvoriteNumbers;
+    public int getFavoriteNumbers() {
+        return favoriteNumbers;
     }
 
-    public void setFvoriteNumbers(int fvoriteNumbers) {
-        this.fvoriteNumbers = fvoriteNumbers;
+    public void setFavoriteNumbers(int fvoriteNumbers) {
+        this.favoriteNumbers = fvoriteNumbers;
     }
 
     public Tariffing getTariffing() {
@@ -41,8 +41,8 @@ public class Parameter {
 
     @Override
     public String toString() {
-        return "Parameter{" +
-                "fvoriteNumbers=" + fvoriteNumbers +
+        return "Parameters{" +
+                "fvoriteNumbers=" + favoriteNumbers +
                 ", tariffing=" + tariffing +
                 ", connectionPayment=" + connectionPayment +
                 '}';

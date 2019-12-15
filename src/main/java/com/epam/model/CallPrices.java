@@ -1,15 +1,15 @@
 package com.epam.model;
 
-public class CallPrice {
+public class CallPrices {
 
     private int inside;
     private int outside;
     private int landlinePhone;
 
-    public CallPrice() {
+    public CallPrices() {
     }
 
-    public CallPrice(int inside, int outside, int landlinePhone) {
+    public CallPrices(int inside, int outside, int landlinePhone) {
         this.inside = inside;
         this.outside = outside;
         this.landlinePhone = landlinePhone;
@@ -41,7 +41,7 @@ public class CallPrice {
 
     @Override
     public String toString() {
-        return "CallPrice{" +
+        return "CallPrices{" +
                 "inside=" + inside +
                 ", outside=" + outside +
                 ", landlinePhone=" + landlinePhone +
