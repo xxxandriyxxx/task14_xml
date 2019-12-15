@@ -12,24 +12,24 @@ import org.xml.sax.InputSource;
 
 public class SAXValidator {
 
-    public static void validate(String schemaPath, String xmlPath) {
-        Schema schema = loadSchema(schemaPath);
-        validateXml(schema, xmlPath);
+    public static void validate(String schemaFilePath, String xmlFilePath) {
+        Schema schema = loadSchema(schemaFilePath);
+        validateXml(schema, xmlFilePath);
     }
 
-    private static void validateXml(Schema schema, String xmlName) {
+    private static void validateXml(Schema schema, String xmlFilePath) {
         try {
             // creating a Validator instance
             Validator validator = schema.newValidator();
-            System.out.println();
-            System.out.println("Validator Class: " + validator.getClass().getName());
+            System.out.println("Validator class: " + validator.getClass().getName());
+            System.out.println("File path: " + xmlFilePath);
 
             // preparing the XML file as a SAX source
-            SAXSource source = new SAXSource(new InputSource(new java.io.FileInputStream(xmlName)));
+            SAXSource source = new SAXSource(new InputSource(new java.io.FileInputStream(xmlFilePath)));
 
             // validating the SAX source against the schema
             validator.validate(source);
-            System.out.println("Validation passed.");
+            System.out.println("Validation passed!");
 
         } catch (Exception e) {
             e.printStackTrace();
