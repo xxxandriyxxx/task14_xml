@@ -91,7 +91,7 @@
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="tariffNo" type="xs:integer">
+        <xs:attribute name="tariffNo">
             <xs:simpleType>
                 <xs:restriction base="xs:integer">
                     <xs:minInclusive value="0"/>
