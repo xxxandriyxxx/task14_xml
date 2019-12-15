@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="tariffs.xsl"?>
 
-<tariffs xmlns="tariffs"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="tariffs.xsd">
+<tariffs>
+        <!--xmlns="tariffs"-->
+        <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+        <!--xsi:schemaLocation="tariffs tariffs.xsd">-->
     <tariff tariffNo="0">
         <name>Super Unlim</name>
         <operator_name>Kyivstar</operator_name>
