@@ -7,6 +7,8 @@ import com.epam.model.parser.SAXHandler;
 import com.epam.model.parser.SAXValidator;
 import com.epam.model.parser.StAXReader;
 import com.epam.model.parser.StAXValidator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -14,10 +16,12 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
+import java.util.Arrays;
 import java.util.List;
 
 public class BusinessLogic implements Model {
 
+    private static Logger logger = LogManager.getLogger(BusinessLogic.class);
     private String xmlFilePath;
     private String schemaFilePath;
     private String xslFilePath;
@@ -45,7 +49,8 @@ public class BusinessLogic implements Model {
                 System.out.println(t.toString());
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(Arrays.toString(e.getStackTrace()));
+            System.out.println("Parser failed!");
         }
     }
 
@@ -62,7 +67,8 @@ public class BusinessLogic implements Model {
                 System.out.println(t.toString());
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(Arrays.toString(e.getStackTrace()));
+            System.out.println("Parser failed!");
         }
     }
 

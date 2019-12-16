@@ -1,6 +1,7 @@
 package com.epam.model.parser;
 
 import java.io.File;
+import java.util.Arrays;
 
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
@@ -10,9 +11,13 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
 
 public class DOMValidator {
+
+    private static Logger logger = LogManager.getLogger(DOMValidator.class);
 
     public static void validate(String schemaFilePath, String xmlFilePath) {
         Schema schema = loadSchema(schemaFilePath);
@@ -28,7 +33,8 @@ public class DOMValidator {
             validator.validate(new DOMSource(document));
             System.out.println("Validation passed!");
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(Arrays.toString(e.getStackTrace()));
+            System.out.println("Validation failed!");
         }
     }
 
@@ -39,7 +45,7 @@ public class DOMValidator {
             SchemaFactory factory = SchemaFactory.newInstance(language);
             schema = factory.newSchema(new File(schemaFileName));
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(Arrays.toString(e.getStackTrace()));
         }
         return schema;
     }
@@ -51,7 +57,7 @@ public class DOMValidator {
             DocumentBuilder builder = factory.newDocumentBuilder();
             document = builder.parse(new File(xmlName));
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(Arrays.toString(e.getStackTrace()));
         }
         return document;
     }

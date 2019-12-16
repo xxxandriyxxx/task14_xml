@@ -4,6 +4,8 @@ import com.epam.model.CallPrices;
 import com.epam.model.Parameters;
 import com.epam.model.Tariff;
 import com.epam.model.Tariffing;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
@@ -18,9 +20,12 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class StAXReader {
+
+    private static Logger logger = LogManager.getLogger(StAXReader.class);
 
     public static List<Tariff> getTariffList(File xmlFile) {
         List<Tariff> tariffList = new ArrayList<>();
@@ -119,17 +124,12 @@ public class StAXReader {
                         tariffList.add(tariff);
                     }
                 }
-
-
             }
-
-
         } catch (FileNotFoundException | XMLStreamException e) {
-            e.printStackTrace();
+            logger.error(Arrays.toString(e.getStackTrace()));
+            System.out.println("Parser failed!");
         }
-
         return tariffList;
     }
-
 
 }
