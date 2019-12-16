@@ -1,7 +1,7 @@
 package com.epam.controller;
 
 public interface Controller {
-    
+
     void parseByDOM();
 
     void parseBySAX();
