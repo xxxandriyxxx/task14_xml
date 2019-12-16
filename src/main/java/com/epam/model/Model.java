@@ -2,7 +2,7 @@ package com.epam.model;
 
 public interface Model {
 
-    void pareseByDOM();
+    void parseByDOM();
 
     void parseBySAX();
 
@@ -17,5 +17,5 @@ public interface Model {
     void transformToHtml();
 
     void transformToHtmlSortedByPayroll();
-    
+
 }
