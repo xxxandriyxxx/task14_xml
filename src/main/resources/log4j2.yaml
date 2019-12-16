@@ -1,0 +1,57 @@
+Configuration:
+  packages: "com.epam.xml"
+  name: Log4j2_Config
+  properties:
+    property:
+      name: log-path
+      value: logs
+
+  #------------------------------------------------------------------------------------------------
+  appenders:
+    RollingFile:
+      # logging levels: INFO and lower
+      # file will be overwritten after reaching the size of 1 MB
+      -
+        name: rolLogFile
+        fileName: ${log-path}/rolLogFile.log
+        # save to archive
+        filePattern: ${log-path}/archive/rolLogFile.log.%d{yyyy-MM-dd-hh-mm}.gz
+        PatternLayout:
+          Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg%xEx{short}%n"
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 1 MB
+  #------------------------------------------------------------------------------------------------
+  Loggers:
+
+    Logger:
+      - name: com.epam.model.parser.DOMValidator
+        level: all
+        AppenderRef:
+          - ref: rolLogFile
+            level: all
+      - name: com.epam.model.parser.SAXValidator
+        level: all
+        AppenderRef:
+          - ref: rolLogFile
+            level: all
+      - name: com.epam.model.parser.StAXReader
+        level: all
+        AppenderRef:
+          - ref: rolLogFile
+            level: all
+      - name: com.epam.model.parser.StAXValidator
+        level: all
+        AppenderRef:
+          - ref: rolLogFile
+            level: all
+      - name: com.epam.model.parser.XmlToHtmlTransformer
+        level: all
+        AppenderRef:
+          - ref: rolLogFile
+            level: all
+      - name: com.epam.model.BusinessLogic
+        level: all
+        AppenderRef:
+          - ref: rolLogFile
+            level: all
